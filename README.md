@@ -8,29 +8,15 @@ The goal was to generate synthetic fraud samples using two GAN models:
 
 These generated samples were then used to balance the dataset and improve the performance of a classification model (Random Forest).
 
----
 
-## 📁 Contents
-
-| File | Description |
-|------|-------------|
-| `gan_fraud_detection.ipynb` | Jupyter Notebook containing the full implementation |
-| `creditcard.csv` | Original dataset used for training (Credit Card Fraud Detection) |
-| `project_report.pdf` | Final report in PDF format (4–6 pages) |
-| `README.md` | This file — project description and instructions |
-| `requirements.txt` | List of required Python packages |
-
----
-
-## 🔍 Problem Statement
+## Problem Statement
 
 In many real-life applications, datasets are highly imbalanced — meaning one class is overrepresented while the other is rare. This leads to poor performance on the minority class, which is often the most important one to detect (e.g., fraud cases).
 
 This project addresses this issue by generating synthetic fraud data using GANs to balance the dataset and improve classification accuracy.
 
----
 
-## 🧪 Dataset Description
+## Dataset Description
 
 - **Dataset**: Credit Card Fraud Detection (from Kaggle)
 - **Total Transactions**: 284,807
@@ -39,9 +25,8 @@ This project addresses this issue by generating synthetic fraud data using GANs 
 
 Clearly, the dataset is **highly imbalanced**, making it difficult for machine learning models to detect fraud effectively.
 
----
 
-## 🧠 Implemented Models
+## Implemented Models
 
 ### 1. Vanilla GAN
 - Generator + Discriminator architecture
@@ -54,9 +39,7 @@ Clearly, the dataset is **highly imbalanced**, making it difficult for machine l
 - Trained for 200 epochs
 - Generated 500 synthetic fraud samples
 
----
-
-## 📊 Classification Results
+## Classification Results
 
 | Metric      | Original | Vanilla GAN | WGAN     |
 |-------------|----------|-------------|----------|
@@ -67,10 +50,8 @@ Clearly, the dataset is **highly imbalanced**, making it difficult for machine l
 
 Results show that both GAN models improved classification performance significantly, with **WGAN** offering better stability and realistic sample generation.
 
----
 
-
-## 🛠 Requirements
+## Requirements
 
 To run the code, install the following dependencies:
 
@@ -79,9 +60,7 @@ pip install torch pandas numpy matplotlib seaborn scikit-learn
 
 ---
 
-## 📌 Notes
-
-All code was implemented in a Google Colab environment using PyTorch for GAN training and scikit-learn for classification. The generated synthetic data was added to the original dataset to create balanced versions, which significantly improved the classifier's ability to detect fraud cases.
+##Notes
 
 This project demonstrates how GANs can be used not only for image generation but also for improving machine learning models by generating realistic synthetic samples for underrepresented classes.
 
